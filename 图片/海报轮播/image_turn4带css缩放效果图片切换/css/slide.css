@@ -1,0 +1,85 @@
+ul {
+  list-style: none;
+}
+ul li {
+  list-style: none;
+}
+.ck-slide {
+  width: 700px;
+  height: 320px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.ck-slide .ck-slide-wrapper {
+  width: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.ck-slide .ck-slide-wrapper li {
+  width: 700px;
+  position: absolute;
+}
+.ck-slide .ck-slide-wrapper .hide {
+  display: none;
+}
+.ck-slide .arrow {
+  width: 700px;
+}
+.ck-slide .arrow a {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 35px;
+  height: 70px;
+  margin-top: -35px;
+  border-radius: 3px;
+  opacity: 0.15;
+  background: red;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  transition: opacity .2s linear 0s;
+}
+.ck-slide .arrow .ck-prev {
+  left: 5px;
+  background: url("../images/arrow-left.png") #000000 50% no-repeat;
+}
+.ck-slide .arrow .ck-next {
+  right: 5px;
+  background: url("../images/arrow-right.png") #000000 50% no-repeat;
+}
+.ck-slide .ck-slidebox {
+  position: absolute;
+  left: 350px;
+  bottom: 2px;
+  z-index: 30;
+}
+.ck-slide .ck-slidebox .slidewrap ul {
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.ck-slide .ck-slidebox .slidewrap ul li {
+  float: left;
+  height: 12px;
+  margin: 4px 10px 10px 4px;
+}
+.ck-slide .ck-slidebox .slidewrap ul li em {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  text-indent: -9999px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+.ck-slide .ck-slidebox .slidewrap ul li em:hover {
+  background-color: #000;
+}
+.ck-slide .ck-slidebox .slidewrap ul .current em {
+  background-color: #000;
+}

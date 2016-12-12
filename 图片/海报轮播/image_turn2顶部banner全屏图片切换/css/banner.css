@@ -1,0 +1,80 @@
+ul {
+  list-style: none;
+}
+.banner-box {
+  min-width: 1210px;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+.banner-box .bd {
+  width: 100% !important;
+}
+.banner-box .bd ul li {
+  width: 100% !important;
+  height: 360px;
+}
+.banner-box .bd ul li .m-width {
+  width: 1210px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.banner-box .bd ul li .m-width a {
+  display: block;
+  background-size: auto;
+}
+.banner-box .bd ul .part1 {
+  background: #F3E5D8;
+}
+.banner-box .bd ul .part2 {
+  background: #B01415;
+}
+.banner-box .bd ul .part3 {
+  background: #C49803;
+}
+.banner-box .bd ul .part4 {
+  background: #FDFDF5;
+}
+.banner-box .banner-btn {
+  width: 1210px;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -605px;
+}
+.banner-box .banner-btn a {
+  display: block;
+  width: 49px;
+  height: 104px;
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  opacity: 0.4;
+  background: rgba(0, 0, 0, 0.2);
+}
+.banner-box .banner-btn .prev {
+  left: 20px;
+  background: url("../images/arrow-left.png") #cccccc 50% no-repeat;
+}
+.banner-box .banner-btn .next {
+  right: 20px;
+  background: url("../images/arrow-right.png") #cccccc 50% no-repeat;
+}
+.banner-box .banner-btn .hd {
+  position: absolute;
+  top: 210px;
+  left: 537px;
+}
+.banner-box .banner-btn .hd ul li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  text-indent: -9999px;
+  margin-left: 20px;
+  background: #ccc;
+  float: left;
+  cursor: pointer;
+}
+.banner-box .banner-btn .hd ul .on {
+  background: #DA324D;
+}

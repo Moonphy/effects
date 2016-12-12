@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        meta(http-equiv='Content-Type',content='text/html; charset=utf-8')
+        link(rel='stylesheet',href='css/cart.css')
+        title 早上好时尚网
+    body
+        .yScrollList
+            .yScrollTitle
+                h1.same 同类商品
+                h1.guess 猜你喜欢
+            .yScrollListIn
+                .yScrollListInList.y1
+                    ul
+                        - for(var i=0; i<4; i++)
+                            li: a(href=''): img(src='images/good_block_img.png')
+                        - for(var i=0; i<3; i++)
+                            li: a(href=''): img(src='images/good_block_img2.png')
+                        - for(var i=0; i<4; i++)
+                            li: a(href=''): img(src='images/good_block_img.png')
+                        - for(var i=0; i<3; i++)
+                            li: a(href=''): img(src='images/good_block_img2.png')
+                    .ybtnl
+                    .ybtnr
+                .yScrollListInList.y2
+                    ul
+                        - for(var i=0; i<4; i++)
+                            li: a(href=''): img(src='images/good_block_img.png')
+                        - for(var i=0; i<3; i++)
+                            li: a(href=''): img(src='images/good_block_img2.png')
+                        - for(var i=0; i<4; i++)
+                            li: a(href=''): img(src='images/good_block_img.png')
+                        - for(var i=0; i<3; i++)
+                            li: a(href=''): img(src='images/good_block_img2.png')
+                    .ybtnl
+                    .ybtnr
+    script(src='js/jquery.js')
+    script(src='js/cart.js')

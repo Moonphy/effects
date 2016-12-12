@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body, ul, li, p, h3, h4{ margin:0; padding:0;}
+        .f_l{ float:left;}
+        .f_r{ float:right;}
+        div#selectbox{ position:relative; width:200px; height:25px; padding:3px; background-color:#000;}
+        input.select{ border:1px #ccc solid;}
+        span.arrow{ display:block; width:25px; height:25px; background-color:#ccc; cursor:pointer;}
+        .classification{ width:160px; height:25px; line-height:25px; background-color:#eee;}
+        #selectbox ul{ position:absolute; top:36px; left:0; padding:5px; display:none; width:160px; height:auto; background-color:#ff9966; clear:both;}
+        #selectbox ul li{ height:25px;; line-height:25px; background-color:#FF9999; cursor:pointer;}
+    </style>
+</head>
+<body>
+<input id="select1" class="select" name = "" value="" type="text" />
+<input name="" type="button" id="submit" value="提交" />
+<div id="selectbox">
+    <div class="classification f_l">--请选择--</div><span class="arrow f_r"></span>
+    <ul>
+        <li>选项一</li>
+        <li>选项二</li>
+        <li>选项三</li>
+        <li>选项四</li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"> </script>
+<script>
+    var
+            $box = $('#selectbox'),
+            $iterms = $('ul', $box),
+            $iterm = $('ul li', $box),
+            $btn = $('.arrow'),
+            $valuebox = $('#select1'),
+            $classification = $('.classification', $box),
+            num = $iterm.length;
+    $iterm.each(function(i){
+        $(this).attr('value',i);
+    });
+    $btn.click(function(){
+        $iterms.slideToggle('slow');
+    });
+    $iterm.each(function(i){
+        $(this).click(function(){
+            $text = $(this).text();
+            $value = $(this).attr('value');
+            $classification.text($text);
+            $valuebox.attr('value',$value);
+        });
+    });
+    //这块不需要
+    $('#submit').click(function(){
+        alert("input value:" + $value);
+        alert("div text show:" + $classification.html());
+    });
+</script>
+</body>
+</html>

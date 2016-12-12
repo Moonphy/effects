@@ -1,0 +1,68 @@
+.block2 {
+  margin-top: 25px;
+}
+.block2 .img_header .header_left {
+  font-size: 16px;
+  float: left;
+  color: #666666;
+  font-weight: bold;
+}
+.block2 .img_header .header_left span {
+  color: #e5007f;
+  font-weight: normal;
+}
+.block2 .img_header .img_title {
+  width: 450px;
+  text-align: center;
+  float: left;
+  line-height: 25px;
+}
+.block2 .img_header .header_right {
+  width: 100px;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 15px;
+  float: right;
+  background: url("../images/budget_img_sort.jpg") no-repeat;
+}
+.block2 .picbox #featured {
+  width: 675px;
+  height: 377px;
+  background: #f1f1f1;
+  position: relative;
+  margin-top: 20px;
+}
+.block2 .picbox #featured .image {
+  margin: 10px auto;
+  position: absolute;
+  overflow: hidden;
+}
+.block2 .picbox #featured .image .price_bg_2 {
+  width: 111px;
+  height: 28px;
+  position: absolute;
+  background: url("../images/price_bg_2.png") no-repeat;
+}
+.block2 .picbox #thumbs {
+  margin: 20px;
+}
+.block2 .picbox #thumbs ul {
+  width: 570px;
+  height: 47px;
+}
+.block2 .picbox #thumbs ul li {
+  display: inline;
+  float: left;
+  cursor: pointer;
+}
+.block2 .picbox #thumbs ul li a {
+  display: block;
+}
+.block2 .picbox #thumbs ul li a:hover {
+  background-image: url("../images/budget_img_hover.png");
+  z-index: 999;
+}
+.block2 .picbox #thumbs ul li .current {
+  background-image: url("../images/budget_img_hover.png");
+  z-index: 999;
+}

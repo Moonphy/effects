@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .formt
+        {
+            width: 400px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            height: 200px;
+            padding: 10px;
+        }
+        .unselected
+        {
+            background-image: url(images/check_bg1.jpg);
+        }
+        .selected
+        {
+            background-image: url(images/check_bg2.jpg);
+        }
+        .unchecked
+        {
+            background-image: url(images/check_bg1_2.jpg);
+        }
+        .checked
+        {
+            background-image: url(images/check_bg2_2.jpg);
+        }
+        .f_checkbox, .f_radio
+        {
+            background-position: 3px center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            display: block;
+            height: 16px;
+            line-height: 120%;
+            padding: 4px 24px;
+        }
+        .formt input
+        {
+            left: -9999px;
+            position: absolute;
+        }
+        .addcolor
+        {
+            color: Red;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"> </script>
+    <script type="text/javascript">
+        $(
+             function () {
+//单选
+                    $(".f_radio").click(
+                            function () {
+                                $(this).addClass("selected").removeClass("unselected").siblings(".selected").removeClass("selected").addClass("unselected");
+                            }
+                    );
+//复选
+                    $(".f_checkbox").toggle(
+                            function () {
+                                $(this).addClass("checked");
+                                $(this).children("input").attr("checked", "checked");
+                            },
+                            function () {
+                                $(this).removeClass("checked");
+                                $(this).children("input").removeAttr("checked");
+                            }
+                    );
+                }
+        );
+    </script>
+</head>
+<body>
+<div class="formt">
+    <label class="f_radio unselected">
+        <input type='radio' name="height" value="dwarf" />
+        网上办税标准版</label>
+    <label class="f_radio unselected">
+        <input type="radio" name="height" value="average" />
+        网上报税专业版</label>
+    <label class="f_radio unselected">
+        <input type="radio" name="height" value="giant" />
+        其他</label>
+    <hr />
+    <label class="f_checkbox unchecked">
+        <input type="checkbox" name="newsletter" value="c" id="c" />
+        发票认证</label>
+    <label class="f_checkbox unchecked">
+        <input type="checkbox" name="newsletter" value="d" id="d" />
+        涉税认证</label>
+</div>
+<label for="male">
+    Male</label>
+<input type="checkbox" name="sex" id="male" />
+</body>
+</html>

@@ -1,0 +1,27 @@
+/*www.jq22.com*/
+body{background-color:white; padding-top:10px; font:100 14px 'Open Sans'}
+
+#lipsum{width:690px; margin:30px auto; color:#34495e;text-align:justify}
+
+img{float:left; margin:0 10px 10px 0;}
+
+.yapiskan{
+  background-color:#e74c3c; 
+  color:white; 
+  font-size:24px; 
+  padding:5px; 
+  text-align:center; 
+  position: fixed; 
+  left:0; 
+  top:0; 
+  width:100%; 
+  transition: top .5s;
+}
+
+.gizle {
+  top: -90px;
+}
+.sabit {
+  top:0;
+  z-index: 9999;
+}

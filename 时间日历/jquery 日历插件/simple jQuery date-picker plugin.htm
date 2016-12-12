@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0039)http://teddevito.com/demos/calendar.php -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>simple jQuery date-picker plugin</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=description 
+content="a simple date-picker built with the jquery library. this is NOT an everything-under-the-kitchen-sink date picker">
+<META name=keywords 
+content=datepicker,date-picker,jquery,jqueryplugin,calendar><LINK rel=stylesheet 
+type=text/css href="simple%20jQuery%20date-picker%20plugin_files/calendar.css">
+<STYLE type=text/css>P {
+	FONT: 12px/1.3em Arial, Helvetica, sans-serif
+}
+UL {
+	FONT: 12px/1.3em Arial, Helvetica, sans-serif
+}
+UL LI {
+	FONT: 12px/1.3em Arial, Helvetica, sans-serif
+}
+BODY {
+	PADDING-BOTTOM: 2em; PADDING-LEFT: 5em; PADDING-RIGHT: 5em; PADDING-TOP: 2em
+}
+</STYLE>
+
+<SCRIPT type=text/javascript 
+src="simple%20jQuery%20date-picker%20plugin_files/jquery-1.3.2.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="simple%20jQuery%20date-picker%20plugin_files/cal.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+
+jQuery(document).ready(function () {
+	
+	$('input.one').simpleDatepicker();
+	$('input.two').simpleDatepicker({ startdate: 2008, enddate: 2012 });
+	$('input.three').simpleDatepicker({ chosendate: '9/9/2010', startdate: '6/10/2008', enddate: '7/20/2011' });
+	$('input.four').simpleDatepicker({ x: 45, y: 3 });
+});
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16891"></HEAD>
+<BODY>
+<H1>simple jQuery date-picker plugin</H1>
+<H6>last updated <!-- #BeginDate format:Am2 -->3/12/09<!-- #EndDate --> </H6>
+<P>Here's a nifty little date picker, but it's not complete. In fact, it may 
+need YOUR help.</P>
+<P>All the code here is original. I have to thank Mike Alsup for suggesting the 
+development pattern that helped this go from one-off simple script to 
+ready-to-use jQuery plugin.</P>
+<P>You're welcome to use anything here as often as you like, even to include it 
+as part of commercially release products. Please don't package and sell it as a 
+standalone application.</P>
+<P>Please send comments and suggestions (complete with any code changes/updates) 
+to:</P><IMG title="low-tech contact button" alt=images/contact.png 
+src="simple%20jQuery%20date-picker%20plugin_files/contact.png"> 
+<HR>
+
+<P>Some test inputs, each with a different setup:</P>
+<P><INPUT class=one type=text name=date> <INPUT class=two type=text name=date> 
+<INPUT class=three type=text name=date></P>
+<P>Some more test inputs, each with the same setup:</P>
+<P><INPUT class=four type=text name=date> <INPUT class=four type=text name=date> 
+<INPUT class=four type=text name=date></P>
+<H4>What is does:</H4>
+<UL>
+  <LI>works on one or more text input elements (<CODE>&lt;input type="text" ... 
+  /&gt;</CODE>)</LI>
+  <LI>highlights a preset date (first looking for a value in the input, then a 
+  passed option / default, then just selects today)</LI>
+  <LI>closes when either a date is picked, the "today" button is hit, or the 
+  "close" button is hit</LI>
+  <LI>allows fast navigation using a &lt;select&gt; field for months and 
+  years</LI>
+  <LI>advances and reverses months with a hit of the <STRONG>«</STRONG> or 
+  <STRONG>»</STRONG> buttons</LI>
+  <LI>automatically hides the <STRONG>«</STRONG> or <STRONG>»</STRONG> buttons 
+  when either the start or end of the date range is reached</LI>
+  <LI>allows input for a year range and/or a date range</LI>
+  <LI>adjusts for leap years</LI>
+  <LI>allows you to set the x and y offset from the top left corner of the input 
+  elements</LI>
+  <LI>allows you to easily change the output format (look for 
+  "<CODE>jQuery.fn.simpleDatepicker.formatOutput = function (dateObj) 
+  {...</CODE>")</LI>
+  <LI>is easily styled via CSS</LI>
+  <LI>works in IE 6, FF 3 (probably earlier) and Chrome 1.0 (and probably 
+  others... just don't have them here on my laptop)</LI></UL>
+<P>It is meant to NOT be an "everything-under-the-kitchen-sink" date picker. 
+Just there to help a user pick a date.</P>
+<H4>How to use it:</H4>
+<P>Simply call <CODE>$('input').simpleDatepicker();</CODE> on the set of 
+elements you would like to work with.</P>
+<H4>Options</H4>
+<P>You can pass an object literal with some options that will be applied to all 
+the datepickers setup with that call to <CODE>simpleDatepicker()</CODE></P>
+<P><CODE>$('input').simpleDatepicker({chosendate: , startdate: , enddate: , x: , 
+y: });</CODE></P>
+<TABLE>
+  <THEAD>
+  <TR>
+    <TH>options</TH>
+    <TH>values</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class=code>[chosendate]</TD>
+    <TD>date string matching <CODE>mm/dd/yyyy</CODE> or 
+    <CODE>m/d/yyyy</CODE></TD></TR>
+  <TR>
+    <TD class=code>[startdate]</TD>
+    <TD>4 digit year or date string matching <CODE>mm/dd/yyyy</CODE> or 
+      <CODE>m/d/yyyy</CODE></TD></TR>
+  <TR>
+    <TD class=code>[enddate]</TD>
+    <TD>4 digit year or date string matching <CODE>mm/dd/yyyy</CODE> or 
+      <CODE>m/d/yyyy</CODE></TD></TR>
+  <TR>
+    <TD class=code>[x]</TD>
+    <TD></TD>an integer, without quotes is fine, like so: <CODE>{ x: 6, y: 10 
+    }</CODE></TR>
+  <TR>
+    <TD class=code>[y]</TD>
+    <TD></TD>an integer, without quotes is fine, like so: <CODE>{ x: 6, y: 10 
+    }</CODE></TR></TBODY></TABLE></BODY></HTML>

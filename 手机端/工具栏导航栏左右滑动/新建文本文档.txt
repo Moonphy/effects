@@ -1,0 +1,27 @@
+编写规范的html格式
+只有如下格式才能实现滑动效果
+<div id="wrapper">
+    <div class="scroll">
+       这个区域可以滑动
+    </div>
+</div>
+如下格式不能滑动
+<div id="wrapper">
+       <div class="other">这个区域可以滑动</div>   
+      <div class="scroll">
+       这个区域不可以滑动了
+        </div>
+</div>
+只有wrapper的第一个子元素才能实现滑动效果。
+4
+
+
+
+编写js调用代码
+var Scroll = new iScroll('wrapper',{hScrollbar:false, vScrollbar:false});
+第一参数必需是滑动元素的父元素的id。
+主要参数一览：
+hScroll: true, 左右滑动，默认为true
+vScroll: true,上下滑动
+hScrollbar: true, 是否显示y轴滚动条，默认为显示
+vScrollbar: true,是否显示X轴滚动条，默认为显示

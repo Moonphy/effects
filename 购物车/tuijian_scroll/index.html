@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品图片滚动列表</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".yScrollListTitle h1").click(function  () {
+		var index=$(this).index(".yScrollListTitle h1");
+		$(this).addClass("yth1click").siblings().removeClass("yth1click");
+		$($(".yScrollListInList")[index]).show().siblings().hide();
+	});
+
+	$(".yScrollListInList1 ul").css({width:$(".yScrollListInList1 ul li").length*(160+84)+"px"});
+	$(".yScrollListInList2 ul").css({width:$(".yScrollListInList2 ul li").length*(160+84)+"px"});
+	var numwidth=(160+84)*5;
+	$(".yScrollListInList .yScrollListbtnl").click(function(){
+		var obj=$(this).parent(".yScrollListInList").find("ul");
+		if (!(obj.is(":animated"))) {
+			var lefts=parseInt(obj.css("left").slice(0,-2));
+			if(lefts<30){
+				obj.animate({left:lefts+numwidth},1000);
+			}
+		}
+	})
+	$(".yScrollListInList .yScrollListbtnr").click(function(){
+		var obj=$(this).parent(".yScrollListInList").find("ul");
+		var objcds=-(30+(Math.ceil(obj.find("li").length/5)-2)*numwidth);
+		if (!(obj.is(":animated"))) {
+			var lefts=parseInt(obj.css("left").slice(0,-2));
+			if(lefts>objcds){
+				obj.animate({left:lefts-numwidth},1000);
+			}
+		}
+	})
+})
+</script>
+
+</head>
+<body>
+
+<div class="yScrollList">
+	<div class="yScrollListTitle">
+        <h1 class="yth1click">人气排行</h1>
+        <h1 class="ytitleh12">新品上架</h1>
+    </div>
+	<div class="yScrollListIn">
+		<div class="yScrollListInList yScrollListInList1" style="display:block;">
+			<ul>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>剩余88人次</span>
+					</a>
+				</li>
+
+			</ul>
+			<div class="yScrollListbtn yScrollListbtnl"></div>
+			<div class="yScrollListbtn yScrollListbtnr"></div>
+		</div>
+		<div class="yScrollListInList yScrollListInList2">
+			<ul>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/inimg.jpg">
+						<p>TP-LINK TL-WN725N 微型150M无线USB网卡</p>
+						<span>总需88人次</span>
+					</a>
+				</li>
+			</ul>
+			<div class="yScrollListbtn yScrollListbtnl"></div>
+			<div class="yScrollListbtn yScrollListbtnr"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

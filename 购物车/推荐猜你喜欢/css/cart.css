@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.yScrollList {
+  width: 1226px;
+  margin: 0 auto;
+}
+.yScrollList .yScrollTitle {
+  width: 400px;
+  height: 30px;
+}
+.yScrollList .yScrollTitle h1 {
+  width: 200px;
+  float: left;
+  font-size: 16px;
+}
+.yScrollList .yScrollListIn {
+  width: 100%;
+  position: relative;
+  height: 200px;
+  border: 1px solid #dbdbdb;
+}
+.yScrollList .yScrollListIn .yScrollListInList {
+  width: 1200px;
+  height: 200px;
+  display: none;
+  overflow: hidden;
+  margin-left: 13px;
+}
+.yScrollList .yScrollListIn .yScrollListInList ul {
+  height: 200px;
+  overflow: hidden;
+}
+.yScrollList .yScrollListIn .yScrollListInList ul li {
+  width: 200px;
+  height: 200px;
+  float: left;
+  list-style: none;
+}
+.yScrollList .yScrollListIn .yScrollListInList ul li a {
+  width: 200px;
+  height: 200px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.yScrollList .yScrollListIn .yScrollListInList ul li img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.yScrollList .yScrollListIn .yScrollListInList .ybtnl {
+  cursor: pointer;
+  position: absolute;
+  width: 13px;
+  height: 19px;
+  top: 96px;
+  background: url(../images/btnys.png) no-repeat 0 0;
+  left: 0px;
+}
+.yScrollList .yScrollListIn .yScrollListInList .ybtnr {
+  cursor: pointer;
+  position: absolute;
+  width: 13px;
+  height: 19px;
+  top: 96px;
+  background: url(../images/btnys.png) no-repeat 0 0;
+  background-position: -14px 0;
+  right: 0px;
+}
+.yScrollList .yScrollListIn .y1 {
+  display: block;
+}

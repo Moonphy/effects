@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <style>
+        body {
+            width: 100%;
+            margin:0;
+            font-size:14px;
+            background:#feecd4;
+            padding-top: 200px;
+        }
+        body{
+            min-width:300px;
+            _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<300?"300px":"");
+        }
+        .main1{
+            width: 200px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .main1 h5,.main1 input{
+            line-height: 1;
+            margin: 0;
+            padding: 5px 0;
+            /*border: none;*/
+            background-color: transparent;
+            color: white;
+        }
+        .main1 input{
+            display: inline;
+            width: auto;
+        }
+        .main2{
+            width: 200px;
+            height: 50px;
+            border: 1px solid white;
+            background-color: red;
+            color: white;
+            margin: 20px auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        .num-con1{
+            position:relative;
+            top:0;
+        }
+        .num1,.num2,.num3{
+            line-height: 50px;
+            font-size: 16px;
+        }
+        .main3-btn{
+            width:70px;
+            height:30px;
+            cursor:pointer;
+            background-color: red;
+            color: #fff;
+            margin: 0 auto;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main1">
+        <h5>随机埋的红包为:</h5>
+        <input type="text" value="" class="selected"/>
+    </div>
+    <div class="main2">
+        <div class="container">
+            <div class="num num1">
+                <div class="num-con num-con1" id="num-con">
+                    <div class="num1">3.33元</div>
+                    <div class="num2">6.66元</div>
+                    <div class="num3">9.99元</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main3">
+        <div class="container">
+            <div class="main3-btn">点击</div>
+        </div>
+    </div>
+    <script type="text/javascript"  src="../assets/js/vendor/zepto-big.min.js"></script>
+    <script type="text/javascript">
+        $(".main3-btn").on('tap', function () {
+
+            reset();
+            letGo();
+
+        });
+
+        var TextNum1;
+
+        function letGo(){
+
+            TextNum1=parseInt(Math.random()*3);  //随机数
+
+            var num1=[-50,-100][TextNum1];      //在这里随机
+
+            $(".num-con1").animate({"top":-150},500,"linear", function () {
+                $(this).css("top",0).animate({"top":num1},500);
+            });
+
+            switch (num1){
+                case -50:
+                    setTimeout(function () {
+                        $(".selected").val('6.66');
+                    },1000);
+                    break;
+                case -100:
+                    setTimeout(function () {
+                        $(".selected").val('9.99');
+                    },1000);
+                    break;
+                default:
+                    setTimeout(function () {
+                        $(".selected").val('3.33');
+                    },1000);
+            }
+        }
+
+        function reset(){
+            $(".num-con1").css({"top":0});
+        }
+    </script>
+</body>
+</html>

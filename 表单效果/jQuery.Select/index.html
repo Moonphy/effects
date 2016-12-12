@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery Select(单选) 模拟插件 V1.3.4</title>
+<style type="text/css">
+body,div,ul,h4,li {margin:0; padding:0; border:none; list-style:none; font-size:1;}
+a {color:#F00; text-decoration:none;}
+a:hover {text-decoration:underline;}
+/* select style */
+/* must have this*/
+.dropdown {outline:none;}
+.dropdown h4{cursor:default; text-indent:5px;}
+.dropdown * {-moz-user-select:none;}
+.dropdown h4.over {}
+.dropdown div {display:none; position:relative;}
+.dropdown span {position:absolute;}
+.dropdown ul{position:absolute;display:none;}
+.dropdown ul li{text-indent:5px;}
+.dropdown ul li.over{}
+/* write you style here */
+.dropselectbox {background:#DDD url(selectBg.png) repeat-x left top;}
+.dropdown {float:left;}
+.dropdown h4{display:block; margin:0; height:21px; font:12px/21px Arial, Helvetica, sans-serif; border:solid 1px #AAA;background:url(droparrow.gif) no-repeat right center;}
+.dropdown h4.over{border-color:#369; background-image:url(droparrowover.gif);}
+.dropdown h4.current{border-color:#003;}
+.dropdown ul{border:1px solid #AAA; background:#FFF;}
+.dropdown ul li{background:#FFF;height:19px;display:block;cursor:default;font:400 12px/19px Arial, Helvetica, sans-serif;}
+.dropdown ul li.over{background:#369; color:#FFF;}
+/* select style */
+#test1, #test2 {float:left; margin-right:20px;}
+</style>
+<script type="text/javascript" src="jquery132.js"></script>
+<script type="text/javascript" src="jquery.select-1.3.5.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#test1").sSelect();
+	$("#test2").sSelect();
+	$("#test3").sSelect();
+	$("#test4").sSelect();
+	$("#test5").sSelect();
+	//提交表单
+	$("#postform").click(function(){
+		if ($("select[name=birthday]").val() == ''){
+			alert ('未选择出生年份');
+			return false;
+		}else if($("select[name=sex]").val() == ''){
+			alert ('未选择性别');
+			return false;
+		}else if ($("select[name=age]").val() == ''){
+			alert ('未选择年龄段');
+			return false;
+		}else if ($("select[name=money]").val() == ''){
+			alert ('未选择收入');
+			return false;
+		}else if ($("select[name=student]").val() == ''){
+			alert ('未选择学历');
+			return false;
+		}else{
+			$("#value")
+			.empty()
+			.append("<b>出生年份:</b>"+$("select[name=birthday]").val()+"<br />")
+			.append("<b>性别:</b>"+$("select[name=sex]").val()+"<br />")
+			.append("<b>年龄段:</b>"+$("select[name=age]").val()+"<br />")
+			.append("<b>收入:</b>"+$("select[name=money]").val()+"<br />")
+			.append("<b>学历:</b>"+$("select[name=student]").val()+"<br />");
+		}
+	});
+})
+</script>
+</head>
+<body>
+<h1>Jquery Select(单选) 模拟插件 V1.3.5</h1>
+<form action="#" method="get" style="margin:10px;">
+<div id="test1" class="dropdown" tabIndex="1">
+    <select name="birthday" onchange="alert('change');">
+			<option value="">请选择出生年份</option>
+			<option value="1980">1980</option>
+            <option value="1981">1981</option>
+            <option value="1982">1982</option>
+			<option value="1983">1983</option>
+            <option value="1984">1984</option>
+			<option value="1985">1985</option>
+            <option value="1986">1986</option>
+            <option value="1987">1987</option>
+            <option value="1988">1988</option>
+            <option value="1989">1989</option>
+	</select>
+</div>
+<div id="test2" class="dropdown" tabIndex="2" style="position:relative; z-index:10;">
+    <select name="sex">
+			<option value="">性别</option>
+			<option value="男">男</option>
+			<option value="女">女</option>
+	</select>
+</div>
+<div id="test3" class="dropdown" tabIndex="3">
+    <select name="age">
+			<option value="">请选择年龄段</option>
+			<option value="10岁~20岁">10岁~20岁</option>
+			<option value="20岁~30岁">20岁~30岁</option>
+            <option value="30岁~40岁">30岁~40岁</option>
+            <option value="40岁以上">40岁以上</option>
+	</select>
+</div>
+<br /><br />
+<div id="test4" class="dropdown" tabIndex="4" style="position:relative; z-index:10;">
+    <select name="money">
+			<option value="">请选择月收入</option>
+			<option value="2000以上">2000以上</option>
+			<option value="3000以上">3000以上</option>
+            <option value="4000以上">4000以上</option>
+            <option value="5000以上">5000以上</option>
+	</select>
+</div>
+<br /><br />
+<div id="test5" class="dropdown" tabIndex="5">
+    <select name="student">
+    		<option value="">请选择学历</option>
+			<option value="大专">大专</option>
+			<option value="本科">本科</option>
+			<option value="硕士">硕士</option>
+	</select>
+</div>
+
+<input type="button" id="postform" value="提交表单" style="border:1px solid #000; width:auto; height:23px; margin-left:20px;" />
+</form>
+</div>
+<div id="value" style="margin:0 10px;"></div>
+<!--<div id="value2" style="margin:0 10px;"></div>-->
+<div style="margin:10px; font:12px/1.6 Arial, Helvetica, sans-serif;">
+<fieldset style="padding:10px;">
+<legend><strong>插件下载</strong></legend>
+<h3 style="margin:0; padding:0; font:900 14px/1.6 Arial, Helvetica, sans-serif;"><a href="jQuery.Select.zip">点此链接下载Jquery Select(单选) 模拟插件 V1.3.5</a></h3>
+</fieldset>
+<fieldset style="padding:10px;">
+<legend><strong>简介</strong></legend>
+1、根据原有的select 模拟生成新的 select。<br />
+2、支持键盘，可通过键盘选择选项。<br />
+3、可自定义样式。<br />
+4、方便灵活，可选择需要的seletc 进行模拟（非全局模拟） <br />
+5、判断用户是否开启脚本支持，若未开启，不进行模拟。<br />
+</fieldset>
+<fieldset style="padding:10px;">
+<legend><strong>08月29日更新 V1.3.5</strong></legend>
+a、修正safari下的样式问题<br />
+b、使用其他的方法生成select后面的下拉箭头<br />
+c、增加对鼠标滚轮的支持。<br />
+d、一些细节上的写法。
+</fieldset>
+<fieldset style="padding:10px;">
+<legend><strong>03月19日更新 V1.3.4</strong></legend>
+a、修正纵向排列时候z-index的问题。（不建议对包含select的容器设置定位【若设置一定要在IE下仔细看页面有无问题】）<br />
+b、修正了对弹出选择层位置的一个Bug。<br />
+c、修正了Opera下面的一些问题。
+</fieldset>
+<fieldset style="padding:10px;">
+<legend><strong>03月05日更新 V1.3.2</strong></legend>
+a、修正了键盘选择时，浏览器滚动条位置变动问题。<br />
+b、对弹出的选择层的高度做了判断。<br />
+c、jQuery 版本更新到1.3.2
+</fieldset>
+<fieldset style="padding:10px;">
+<legend><strong>12月09日更新 V1.3</strong></legend>
+a、优化代码。<br />
+b、针对索引值进行了测试，修正部分情况下索引值混乱的Bug。<br />
+c、增加对home\pg up\pg dn\end 的支持<br />
+d、生成select宽度可自动延展性质。<br />
+e、一些细节调整。
+</fieldset>
+</div>
+<div id="value3" style="margin:0 10px;"></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+body {
+	font-family: 'Metrophobic', sans-serif;
+}
+.lanrenzhijia_1 {
+	display: block;
+	margin: 20px;
+	padding: 80px 16px 164px 16px;
+	border: none;
+	width: 228px;
+	height: 310px;
+	background: url(../images/htc_dream.png) no-repeat 0 0;
+}
+.lanrenzhijia_1 .promptumenu_window {
+	margin:0;
+	border:none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	background: transparent none;
+}
+.lanrenzhijia_2 .promptumenu_nav {
+	bottom: 2px;
+}
+.container {
+	display: block;
+	width: 880px;
+	margin: 30px auto;
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+	padding: 40px;
+}
+.promptumenu_nav {
+	z-index: 5;
+	position: absolute;
+	bottom:5px;
+	left: 50%;
+	margin-right: -50%;
+}
+.promptumenu_window {
+	cursor: url(../images/hand.ico), move;
+	background: #EEE;
+	border: solid 5px #666;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	margin: 10px;
+	position: relative;
+}
+.promptumenu_nav a {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	outline: none;
+	background: url(../images/pagelink.png) 0 -20px no-repeat;
+	display: block;
+	float: left;
+	position: relative;
+	left: -50%;
+	margin: 0 2px;
+}
+.promptumenu_nav a.active {
+	background: url(../images/pagelink.png) 0 0 no-repeat;
+}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

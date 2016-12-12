@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        meta(http-equiv='Content-Type',content='text/html; charset=utf-8')
+        link(rel='stylesheet',href='css/slide.css')
+        title 图片切换
+    body
+        .block2
+            .img_header
+                .header_left 四大类(
+                    span 1389
+                .header_left ）
+                .img_title 珍丝坊 韩版磨毛植物羊绒 蓝色 青花瓷
+                .header_right 排序方式
+            .picbox
+                #featured
+                    #image_pic-01.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-02.image
+                        img(class='full',src='images/examples/img_big_2.jpg')
+                        .price_bg_2
+                    #image_pic-03.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-04.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-05.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-06.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-07.image
+                        img(class='full',src='images/examples/img_big_2.jpg')
+                        .price_bg_2
+                    #image_pic-08.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-09.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    #image_pic-010.image
+                        img(class='full',src='images/examples/img_big_1.jpg')
+                        .price_bg_2
+                    .arrow
+                #thumbs
+                    ul
+                        li.first.btnPrev: img(id='play_prev' src='images/arrow_left.png')
+                        li.slideshowItem: a(id='thumb_pic-01',href='javascript:'): .current: img(src='images/examples/img_little_1.jpg')
+                        li.slideshowItem: a(id='thumb_pic-02',href='javascript:'): img(src='images/examples/img_little_2.jpg')
+                        li.slideshowItem: a(id='thumb_pic-03',href='javascript:'): img(src='images/examples/img_little_3.jpg')
+                        li.slideshowItem: a(id='thumb_pic-04',href='javascript:'): img(src='images/examples/img_little_4.jpg')
+                        li.slideshowItem: a(id='thumb_pic-05',href='javascript:'): img(src='images/examples/img_little_5.jpg')
+                        li.slideshowItem: a(id='thumb_pic-06',href='javascript:'): img(src='images/examples/img_little_6.jpg')
+                        li.slideshowItem: a(id='thumb_pic-07',href='javascript:'): img(src='images/examples/img_little_7.jpg')
+                        li.slideshowItem: a(id='thumb_pic-08',href='javascript:'): img(src='images/examples/img_little_8.jpg')
+                        li.slideshowItem: a(id='thumb_pic-09',href='javascript:'): img(src='images/examples/img_little_9.jpg')
+                        li.slideshowItem: a(id='thumb_pic-10',href='javascript:'): img(src='images/examples/img_little_10.jpg')
+                        li.last.btnNext: img(id='play_next' src='images/arrow_right.png')
+        script(src='js/jquery-1.8.3.min.js')
+        script(src='js/slide.js')
+        script
+            var target = ["pic-01","pic-02","pic-03","pic-04","pic-05","pic-06","pic-07","pic-08","pic-09","pic-10"];

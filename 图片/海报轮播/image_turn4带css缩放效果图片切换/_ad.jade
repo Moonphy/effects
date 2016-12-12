@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(http-equiv='Content-Type',content='text/html; charset=utf-8')
+        link(rel='stylesheet',href='css/slide.css')
+        title 图片切换
+    body
+        .ck-slide
+            ul.ck-slide-wrapper
+                li: a(): img(src='images/1.jpg')
+                li.hide: a(): img(src='images/2.jpg')
+                li.hide: a(): img(src='images/3.jpg')
+                li.hide: a(): img(src='images/4.jpg')
+                li.hide: a(): img(src='images/5.jpg')
+            .arrow
+                a(href='javascript:;',class='ctrl-slide ck-prev') 上一张
+                a(href='javascript:;',class='ctrl-slide ck-next') 下一张
+            .ck-slidebox
+                .slidewrap
+                    ul.dot-wrap
+                        li.current: em 1
+                        li: em 2
+                        li: em 2
+                        li: em 2
+                        li: em 2
+        script(src='js/jquery-1.8.3.min.js')
+        script(src='js/slide.js')
+        script
+            $('.ck-slide').ckSlide({autoPlay: true});

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery全屏图片幻灯片上下按钮控制幻灯片播放</title>
+<meta name="description" content="jQuery全屏图片幻灯片，通过设置上下按钮来控制幻灯片播放。当鼠标悬停在幻灯片区域时上下按钮显示，鼠标里面后上下按钮隐藏。点击上下按钮幻灯片播放。" />
+
+<link href="css/style.css" rel="stylesheet">
+
+<script src="js/jquery.1.9.1.min.js"></script>
+<script src="js/modernizr.custom.49511.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/jquery.fullscreenslideshow.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function($) {
+	$('#wrapper').fullscreenSlideshow({
+		easeInUp: 'fadeInUp',
+		easeInDown: 'fadeInDown'
+	});
+});
+</script>
+
+</head>
+<body>
+
+	<div id="wrapper">
+		<div class="item-container" data-bgimage="images/background.jpg">
+			<div class="item-content">
+				<a href="http://www.17sucai.com/" class="img-link"><img width="256" height="256" src="images/bag.png" alt="" class="item-img large-offset"  /></a>
+				<p class="item-title large-offset" data-easeinup="bounceInLeft" data-easeindown="bounceInRight">Auto delay slideshow</p>
+				<br />
+				<p class="item-desc">Click the image on the left to open a link. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius architecto similique dolore culpa suscipit ullam porro natus tenetur vitae beatae error quaerat pariatur.</p>
+				<p class="item-desc">A hyperlink here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id.</p>
+			</div>
+		</div>
+		<div class="item-container" data-bgimage="images/blurred_colored_background-other.jpg">
+			<div class="item-content">
+				<a href="http://www.17sucai.com/" class="img-link"><img width="256" height="256" src="images/ball.png" alt="" class="item-img large-offset" data-easeinup="rollIn" data-easeindown="rollIn" /></a>
+				<p class="item-title large-offset" data-easeinup="rollIn" data-easeindown="rollIn">Customize each element's animation</p>
+				<br />
+				<p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id quibusdam eos architecto ratione ab quod sit similique dolore culpa suscipit ullam porro natus tenetur vitae beatae error quaerat pariatur.</p>
+			</div>
+		</div>
+		<div class="item-container" data-bgimage="images/blurred_red_abstract_background-other.jpg">
+			<div class="item-content">
+				<a href="http://www.17sucai.com/" class="img-link"><img width="256" height="256" src="images/bullfinch.png" alt="" class="item-img large-offset large-offset" /></a>
+				<p class="item-title large-offset">Customize the position via CSS</p>
+				<br />
+				<p class="item-desc">Link to my profile sit amet, consectetur adipisicing elit. Eius id.</p>
+				<p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id quibusdam eos architecto ratione ab quod sit similique dolore culpa suscipit ullam porro natus tenetur vitae beatae error quaerat pariatur.</p>
+			</div>
+		</div>
+		<div class="item-container" data-bgimage="images/dark_background-other.jpg">
+			<div class="item-content">
+				<a href="http://www.17sucai.com/" class="img-link"><img width="256" height="256" src="images/cookies.png" alt="" class="item-img large-offset" /></a>
+				<p class="item-title large-offset">Optional title here</p>
+				<br />
+				<p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id quibusdam eos architecto, background images are from photos8 ratione ab quod sit vitae beatae error quaerat pariatur.</p>
+			</div>
+		</div>
+		<div class="item-container" data-bgimage="images/light_blue_background_2-other.jpg">
+			<div class="item-content">
+				<p class="item-title large-offset">Put image on the right</p>
+				<br />
+				<p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius id  ullam porro natus tenetur vitae beatae error quaerat pariatur.</p>
+				<a href="http://www.17sucai.com/" class="img-link"><img width="256" height="256" src="images/decorations.png" alt="" class="item-img large-offset" /></a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
